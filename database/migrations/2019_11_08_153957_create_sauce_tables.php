@@ -15,7 +15,7 @@ class CreateSauceTables extends Migration
     {
         Schema::create('currencies', function (Blueprint $table) {
             $table->bigIncrements('id')->unsigned();
-            $table->string('name')->unique();
+            $table->string('name');
             $table->string('code')->unique();
             $table->timestamps();
         });
@@ -24,7 +24,8 @@ class CreateSauceTables extends Migration
             $table->bigIncrements('id')->unsigned();
             $table->bigInteger('currency_from_id')->unsigned();
             $table->bigInteger('currency_to_id')->unsigned();
-            $table->double('rate');
+            $table->double('rate')->unsigned();
+            $table->dateTime('provider_updated');
             $table->timestamps();
 
             $table->foreign('currency_from_id')
