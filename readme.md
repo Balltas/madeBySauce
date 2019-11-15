@@ -37,3 +37,7 @@ when api is called. I have also used some checks when the data is imported form 
 But I didnt scale the task in that way, that enother xml parser would be replaced.
 
 This is only part 1 - The API endpoint
+
+## Technical Challenge Part 2
+
+- For vue.js compilation I was using npm - 6.12.0
